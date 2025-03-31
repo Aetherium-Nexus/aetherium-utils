@@ -8,7 +8,7 @@ describe('URL Utilities', () => {
     expect(isUrl(null)).to.be.false;
     expect(isUrl('')).to.be.false;
     expect(isUrl('foobar')).to.be.false;
-    expect(isUrl('https://hyperlane.xyz')).to.be.true;
+    expect(isUrl('https://aetherium-nexus.com')).to.be.true;
   });
 
   it('isHttpsUrl', () => {
@@ -16,8 +16,8 @@ describe('URL Utilities', () => {
     expect(isHttpsUrl(null)).to.be.false;
     expect(isHttpsUrl('')).to.be.false;
     expect(isHttpsUrl('foobar')).to.be.false;
-    expect(isHttpsUrl('http://hyperlane.xyz')).to.be.false;
-    expect(isHttpsUrl('https://hyperlane.xyz')).to.be.true;
+    expect(isHttpsUrl('http://aetherium-nexus.com')).to.be.false;
+    expect(isHttpsUrl('https://aetherium-nexus.com')).to.be.true;
   });
 
   it('isRelativeUrl', () => {
@@ -25,8 +25,8 @@ describe('URL Utilities', () => {
     expect(isRelativeUrl(null)).to.be.false;
     expect(isRelativeUrl('')).to.be.false;
     expect(isRelativeUrl('foobar')).to.be.false;
-    expect(isRelativeUrl('https://hyperlane.xyz')).to.be.false;
+    expect(isRelativeUrl('https://aetherium-nexus.com')).to.be.false;
     expect(isRelativeUrl('/foobar')).to.be.true;
-    expect(isRelativeUrl('/foo/bar', 'https://hyperlane.xyz')).to.be.true;
+    expect(isRelativeUrl('/foo/bar', 'https://aetherium-nexus.com')).to.be.true;
   });
 });

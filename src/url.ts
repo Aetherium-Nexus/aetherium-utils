@@ -21,7 +21,7 @@ export function isHttpsUrl(value?: string | null) {
 export function isRelativeUrl(value?: string | null, base?: string): boolean {
   try {
     if (!value || !value.startsWith('/')) return false;
-    const url = new URL(value, base || 'https://hyperlane.xyz');
+    const url = new URL(value, base || 'https://aetherium-nexus.com');
     return !!url.pathname;
   } catch {
     return false;
