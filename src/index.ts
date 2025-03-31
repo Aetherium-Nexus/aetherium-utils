@@ -41,7 +41,27 @@ export {
   strip0x,
   ZERO_ADDRESS_HEX_32,
 } from './addresses.js';
+export {
+  addBufferToGasLimit,
+  convertDecimals,
+  convertDecimalsToIntegerString,
+  eqAmountApproximate,
+  fromWei,
+  fromWeiRounded,
+  toWei,
+  tryParseAmount,
+} from './amount.js';
 export { chunk, exclude, randomElement } from './arrays.js';
+export {
+  concurrentMap,
+  fetchWithTimeout,
+  pollAsync,
+  raceWithContext,
+  retryAsync,
+  runWithTimeout,
+  sleep,
+  timeout,
+} from './async.js';
 export { base58ToBuffer, bufferToBase58, hexOrBase58ToHex } from './base58.js';
 export { fromBase64, toBase64 } from './base64.js';
 export {
@@ -53,11 +73,13 @@ export {
   isZeroish,
   mulBigAndFixed,
 } from './big-numbers.js';
+export { formatCallData } from './calldata.js';
 export {
   isCheckpoint,
   isS3Checkpoint,
   isS3CheckpointWithId,
 } from './checkpoints.js';
+export { domainHash } from './domains.js';
 export { safelyAccessEnvVar } from './env.js';
 export { canonizeId, evmId } from './ids.js';
 export {
@@ -79,6 +101,10 @@ export {
   parseMessage,
   parseWarpRouteMessage,
 } from './messages.js';
+export {
+  formatLegacyMultisigIsmMetadata,
+  parseLegacyMultisigIsmMetadata,
+} from './multisig.js';
 export {
   ObjectDiff,
   ValueOf,
@@ -155,3 +181,4 @@ export {
 export { isHttpsUrl, isRelativeUrl, isUrl } from './url.js';
 export { assert } from './validation.js';
 export { BaseValidator, ValidatorConfig } from './validator.js';
+export { tryParseJsonOrYaml } from './yaml.js';
