@@ -41,9 +41,44 @@ export {
   strip0x,
   ZERO_ADDRESS_HEX_32,
 } from './addresses.js';
+export { chunk, exclude, randomElement } from './arrays.js';
+export { base58ToBuffer, bufferToBase58, hexOrBase58ToHex } from './base58.js';
+export { fromBase64, toBase64 } from './base64.js';
+export {
+  BigNumberMax,
+  BigNumberMin,
+  bigToFixed,
+  fixedToBig,
+  isBigNumberish,
+  isZeroish,
+  mulBigAndFixed,
+} from './big-numbers.js';
+export {
+  isCheckpoint,
+  isS3Checkpoint,
+  isS3CheckpointWithId,
+} from './checkpoints.js';
 export { safelyAccessEnvVar } from './env.js';
 export { canonizeId, evmId } from './ids.js';
+export {
+  LogFormat,
+  LogLevel,
+  configureRootLogger,
+  createPinoLogger,
+  ethersBigNumberSerializer,
+  getLogFormat,
+  getLogLevel,
+  getRootLogger,
+  rootLogger,
+  setRootLogger,
+} from './logging.js';
 export { mean, median, randomInt, stdDev, sum } from './math.js';
+export {
+  formatMessage,
+  messageId,
+  parseMessage,
+  parseWarpRouteMessage,
+} from './messages.js';
 export {
   ObjectDiff,
   ValueOf,
@@ -70,6 +105,13 @@ export {
   transformObj,
   TransformObjectTransformer,
 } from './objects.js';
+export { Result, failure, success } from './result.js';
+export {
+  difference,
+  intersection,
+  setEquality,
+  symmetricDifference,
+} from './sets.js';
 export {
   errorToString,
   fromHexString,
@@ -112,3 +154,4 @@ export {
 } from './types.js';
 export { isHttpsUrl, isRelativeUrl, isUrl } from './url.js';
 export { assert } from './validation.js';
+export { BaseValidator, ValidatorConfig } from './validator.js';
